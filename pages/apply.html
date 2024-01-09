@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Window Birds</title>
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <a href="home.html">home</a>
+        <a href="apply.html">apply now</a>
+        <a href="bird-info.html">birdie learnin'</a>
+        <a href="gallery.html">gallery</a>
+    </nav>
+
+
+    <div id="apply-wrapper">
+
+        <h1>Apply for your Official <br>Bird Watcher's Card</h1>
+        <form id="quiz-container" onreset="resetForm()">
+            <fieldset>
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                <div>
+                    <label for="city">City you live in:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div id="bird-choice-outer">
+                    <label>Which bird would you most like to have lunch with?</label>
+                    <div class="bird-choice-container">
+                        <div class = "bird-choice">
+                            <img  src="../images/white-crowned-sparrow.jpg" alt="white crowned sparrow">
+                            <input type="radio" id="sparrow" name="bird-type" value="sparrow" required>
+                            <label for="sparrow">White-crowned sparrow</label>
+                        </div>
+                        <div class = "bird-choice">
+                            <img src="../images/townsend-warbler.jpg" alt="townsend warbler">
+                            <input type="radio" id="warbler" name="bird-type" value="warbler" required>
+                            <label for="warbler">Townsend Warbler</label>
+                        </div>
+                        <div class = "bird-choice">
+                            <img src="../images/chesnut-chickadee.jpg" alt="chesnut-backed chickadee">
+                            <input type="radio" id="chickadee" name="bird-type" value="chickadee" required>
+                            <label for="chickadee">Chestnut-backed Chickadee</label>
+                        </div>
+                        <div class = "bird-choice">
+                            <img src="../images/house-finch.jpg" alt="house finch">
+                            <input type="radio" id="finch" name="bird-type" value="finch" required>
+                            <label for="finch">House Finch</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label for="certain">I agree to watch the birds to the best of my ability</label>
+                    <input type="checkbox" id="certain" name="certain" value="yes" required>
+                </div>
+                <div class="tag-line-container">
+                    <label for="tag-line">Optional Bird Watcher Tag Line:</label>
+                    <textarea id="tag-line" name="message" rows="3" cols="30" placeholder="Your tagline here."></textarea>
+                </div>
+                <button type="reset">Reset</button>
+                <button onclick="submitQuiz(event)">Submit</button>
+            </fieldset>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="../main.js"></script>
+    <div id="bird-container">
+        <img src="../images/birdie-walker.png" id="bird">
+    </div>
+</body>
+
+</html>
